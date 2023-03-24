@@ -1,6 +1,6 @@
 /* eslint-disable */
 import "./App.css";
-import { useState } from "react";
+import React, { useState } from "react";
 
 function App() {
   let [postTitle, setPostTitle] = useState([
@@ -14,7 +14,6 @@ function App() {
   return (
     <div className="App">
       <div className="black-nav">블로그임</div>
-
       <div className="list">
         <button
           style={{ marginRight: "10px" }}
@@ -68,23 +67,37 @@ function App() {
   );
 }
 
-const MyModal = () => {
-  return (
-    <div className="modal">
-      <h4>My Modal Hello, World</h4>
-      <p>My Modal Body</p>
-    </div>
-  );
-};
+class MyModal extends React.Component {
+  render(props) {
+    return (
+      <div className="modal">
+        <h4>my tag block test title</h4>
+        <p>my tag block test body</p>
+      </div>
+    );
+  }
+}
 
-function Modal() {
-  return (
-    <div className="modal">
-      <h4>Modal</h4>
-      <p>날짜</p>
-      <p>상세 내용</p>
-    </div>
-  );
+// const MyModal = () => {
+//   return (
+//     <div className="modal">
+//       <h4>my tag block test title</h4>
+//       <p>my tag block test body</p>
+//     </div>
+//   );
+// };
+//
+
+class Modal extends React.Component {
+  render() {
+    return (
+      <div className="modal">
+        <h4>Modal</h4>
+        <p>날짜</p>
+        <p>상세 내용 클래스 테스트</p>
+      </div>
+    );
+  }
 }
 
 export default App;
